@@ -1,0 +1,949 @@
+/*header and footer*/
+
+* {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Calibri Light";
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+/* thẻ div dòng 11-286 trang register*/
+
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+}
+
+
+/* thẻ div dòng 12-14 trang register*/
+
+.header-logo {
+    width: 100%;
+    height: 100px;
+    background: #001526;
+}
+
+
+/* thẻ img dòng 13 trang register*/
+
+.header-logo img {
+    width: 135px;
+    height: 80px;
+    margin-top: 5px;
+}
+
+
+/* thẻ div dòng 15-285 trang register*/
+
+.header-menu {
+    max-width: 100%;
+    height: 45px;
+    background: #0b2238;
+    padding: 0 0 0 10%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: -1;
+}
+
+
+/* thẻ div dòng 16-274 trang register*/
+
+.header-menu-main {
+    width: 90%;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0 10% 0 10%;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    max-height: 45px;
+    z-index: -1;
+}
+
+
+/* thẻ div dòng 275-278 trang register*/
+
+.user-services {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    left: 0;
+    background: #001526;
+    display: none;
+}
+
+
+/* thẻ div dòng 276,277 trang register*/
+
+.user-services-element {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-top: 25px;
+}
+
+
+/* thẻ a dòng 276,277 trang register*/
+
+.user-services-element>a {
+    text-decoration: none;
+    color: #b1b1b1;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+}
+
+
+/* thẻ div dòng 17-89,90-158,159-161,162-183,184-213,214-245,246-270,271-273 trang register*/
+
+.menu-element {
+    position: relative;
+}
+
+
+/* thẻ a dòng 18, trang register*/
+
+.menu-element>a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+}
+
+
+/* thẻ span dòng 18,91,160,163,185,215,247,272 trang register*/
+
+.menu-element a span {
+    position: relative;
+    top: 12px;
+    padding-bottom: 8px;
+}
+
+
+/* thẻ div dòng 19-88,92-157 trang register*/
+
+.menu-dropdown-main {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -150px;
+    width: 1000px;
+    height: 300px;
+    background: white;
+    z-index: 1;
+    box-sizing: border-box;
+    animation: moveUp ease-in-out .2s;
+}
+
+
+/* thẻ div dòng 164-182,186-212,216-244,248-269 trang register*/
+
+.menu-dropdown-main-small {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -150px;
+    width: 500px;
+    height: 300px;
+    background: white;
+    z-index: 1;
+    box-sizing: border-box;
+    animation: moveUp ease-in-out .2s;
+}
+
+
+/* thẻ div dòng 20-33,93-104 trang register*/
+
+.menu-dropdown-main-img {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+
+/* thẻ div dòng 21-32,94-103 trang register*/
+
+.menu-dropdown-main-img>div {
+    width: 90%;
+    height: 85%;
+    margin-top: 25px;
+    position: relative;
+}
+
+
+/* thẻ div dòng 249-256,165-170,187-196,217-227 trang register*/
+
+.menu-dropdown-main-small-img {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+
+/* thẻ div dòng 166-169,188-195,218-226,250-255 trang register*/
+
+.menu-dropdown-main-small-img>div {
+    width: 90%;
+    height: 85%;
+    margin-top: 25px;
+    position: relative;
+}
+
+
+/* thẻ a dòng 167,168 trang register*/
+
+.pos-dropdown-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: opacityUp ease-in-out .6s;
+}
+
+
+/* 5 thẻ img dòng 189-193 trang register*/
+
+.hob-dropdown-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: opacityUp ease-in-out .6s;
+}
+
+
+/* 6 thẻ img dòng 219-225 trang register*/
+
+.s-dropdown-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: opacityUp ease-in-out .8s;
+}
+
+
+/* 3 thẻ img dòng 251-253 trang register*/
+
+.h-dropdown-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: opacityUp ease-in-out .6s;
+}
+
+
+/* 9 thẻ img dòng 22-30 trang register*/
+
+.dropdown-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: opacityUp ease-in-out .6s;
+}
+
+
+/* 8 thẻ img dòng 95-102 trang register*/
+
+.jewel-dropdown-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: opacityUp ease-in-out .6s;
+}
+
+
+/* thẻ div dòng 34-87,105-156 trang register*/
+
+.menu-dropdown-main-content {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+
+
+/* thẻ div dòng 171-181, 197-211, 228-243, 257-268 trang register*/
+
+.menu-dropdown-main-small-content {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+
+/* .w-20 {
+    width: 20px;
+} */
+
+
+/* thẻ div dòng 35-50,106-119 trang register*/
+
+.col-25 {
+    width: 25%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+
+/* thẻ div dòng 121-131,132-142,143-154,52-62,63-73,74-85 trang register*/
+
+.col-33 {
+    width: 33%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 40px;
+    position: relative;
+}
+
+
+/* thẻ div dòng 51-86,120-155 trang register*/
+
+.col-75 {
+    width: 75%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+
+/* thẻ div dòng 172-180,198-210,229-242,258-267 trang register*/
+
+.col-100 {
+    width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+
+/* thẻ h5 dòng 174,200,231,260 trang register*/
+
+.col-100>div>h5 {
+    font-size: 30px;
+    font-family: "Bradley Hand ITC";
+    display: inline;
+    border-bottom: 0.5px solid #d1cfcf;
+    margin-right: 30px;
+}
+
+
+/* thẻ h5 dòng 54,65,76,123,134,145 trang register*/
+
+.col-33>div>h5 {
+    font-size: 20px;
+    font-family: "Bradley Hand ITC";
+    display: inline;
+    border-bottom: 0.5px solid #d1cfcf;
+}
+
+
+/* thẻ h4 dòng 77,164 trang register*/
+
+.col-33>div>h4 {
+    font-size: 20px;
+    font-family: "Bradley Hand ITC";
+    display: inline;
+}
+
+
+/* thẻ h4 dòng 201 trang register*/
+
+.col1>div>h4 {
+    font-size: 30px;
+    font-family: "Bradley Hand ITC";
+    display: inline;
+}
+
+
+/* thẻ div dòng 280-284 trang register*/
+
+.header-menu-icon {
+    display: inline;
+    width: 10%;
+    float: right;
+}
+
+
+/* 3 thẻ img dòng 281-283 trang register*/
+
+.header-menu-icon>a>img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 6px;
+}
+
+
+/* thẻ div dòng 36-38,39-49,107-109,110-118,173-175,176-179,199-202,203-209,230-232,233-241,259-261,262-266 trang register*/
+
+.col1 div {
+    height: auto;
+    padding-right: 5px;
+}
+
+
+/* thẻ h5 dòng 174,200,231,260,37,108 trang register*/
+
+.col1>div>h5 {
+    font-size: 30px;
+    font-family: "Bradley Hand ITC";
+    display: inline;
+    border-bottom: 0.5px solid #d1cfcf;
+    margin-right: 30px;
+}
+
+
+/* thẻ div dòng 56-58,67-69,79-81,125-127,136-138,148-150 trang register*/
+
+.img-title {
+    position: absolute;
+    top: 85px;
+    /*top 70*/
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+
+/* thẻ div dòng 59-61,70-72,82-84,128-130,139-141,151-153 trang register*/
+
+.img-be {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 175px;
+    height: auto;
+}
+
+
+/* thẻ img dòng 60,71,83,129,140,152 trang register*/
+
+.img-be>img {
+    width: 91%;
+    height: 35%;
+}
+
+
+/* thẻ img dòng 59,68,80,126,137,149 trang register*/
+
+.img-title>img {
+    width: 75%;
+}
+
+
+/* các thẻ a dòng 111-117,177,178,204-208,234-240,263-256,40-48 trang register*/
+
+.col1>div>a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+
+
+/* thẻ div dòng 288-381 trang register*/
+
+.main {
+    max-width: 100%;
+    height: auto;
+    margin-top: 140px;
+    margin-bottom: 50px;
+    background: white;
+}
+
+
+/* thẻ div dòng 17-89,90-158,159-161,162-183,184-213,214-245,246-270,271-273 trang register*/
+
+.menu-element:hover {
+    background: white;
+}
+
+
+/* thẻ div dòng 17-89,90-158,159-161,162-183,184-213,214-245,246-270,271-273 trang register*/
+
+.menu-element:hover .hover-color-black {
+    color: black;
+    border-bottom: 3px solid #001526;
+    animation: opacityUp ease-in-out .5s;
+}
+
+
+/* thẻ div dòng 19-88,92-157 trang register*/
+
+.menu-element:hover>.menu-dropdown-main {
+    display: block;
+}
+
+
+/* thẻ div dòng 164-182,186-212,216-244,248-269 trang register*/
+
+.menu-element:hover>.menu-dropdown-main-small {
+    display: block;
+}
+
+
+/* thẻ div dòng 56-58,67-69,79-81,125-127,136-138,148-150 trang register*/
+
+.img-title:hover {
+    animation: imgFlyUp forwards 1s;
+}
+
+
+/* thẻ div dòng 59,70,82,128,139,151 trang register*/
+
+.img-title:hover+.img-be {
+    display: block;
+    animation: beOpacityUp ease-in-out 1s;
+}
+
+
+/* .opacity-down {
+    animation: opacityDown ease-in-out 1s;
+} */
+
+
+/* .opacity-up {
+    animation: opacityUp ease-in-out 0.4s;
+} */
+
+@keyframes opacityDown {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        top: 65px;
+        opacity: 0;
+    }
+    to {
+        top: 45px;
+        opacity: 1;
+    }
+}
+
+@keyframes opacityUp {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes beOpacityUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes imgFlyUp {
+    from {
+        top: 85px;
+    }
+    to {
+        top: 65px;
+    }
+}
+
+
+/* thẻ pan dòng 387,399,402 trang register*/
+
+.p-r-10 {
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-right: 0.5px solid #2d3e4e;
+}
+
+
+/* .p-b-5 {
+} */
+
+
+/* .border-right {
+} */
+
+
+/* thẻ pan dòng 387,391,393,399,402 trang register*/
+
+.d-i-flex {
+    display: inline-flex;
+    height: auto;
+}
+
+
+/* thẻ img dòng 387,391,393,399,402 trang register*/
+
+.arrow-up {
+    width: 15px;
+    height: 15px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+
+/* thẻ div dòng 382-416 trang register*/
+
+.footer {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+
+/* thẻ div dòng 383-415 trang register*/
+
+.footer>div {
+    padding: 0 2%;
+}
+
+
+/* thẻ div dòng 383-415 trang register*/
+
+.footer-menu {
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    background: #001526;
+    position: fixed;
+}
+
+
+/* thẻ div dòng 386-396 trang register*/
+
+.footer-element-left {
+    display: inline-flex;
+    width: 45%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+/* thẻ div dòng 397-413 trang register*/
+
+.footer-element-right {
+    display: inline-flex;
+    width: 20%;
+    height: 100%;
+    justify-content: space-between;
+    float: right;
+}
+
+
+/* thẻ a dòng 387,389,391,393,395 trang register*/
+
+.footer-element-left>div>a {
+    text-decoration: none;
+    color: #b1b1b1;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+}
+
+
+/* thẻ span dòng 387,389,391,393,395 trang register*/
+
+.footer-element-left>div>a>span {
+    position: relative;
+    top: 12px;
+    padding-bottom: 5px;
+}
+
+
+/* thẻ a dòng 399,402 trang register*/
+
+.footer-element-right>div>a>span {
+    position: relative;
+    top: 12px;
+    padding-bottom: 5px;
+}
+
+
+/* thẻ a dòng 399,402,405,408,411 trang register*/
+
+.footer-element-right>div>a {
+    text-decoration: none;
+    color: #b1b1b1;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+}
+
+
+/* .p-relative {
+    position: relative;
+} */
+
+
+/* .color-black {
+    background: black;
+} */
+
+
+/* thẻ img dòng 405,408,411 trang register*/
+
+.logo-social-network {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+
+/* thẻ div dòng 19-88,92-157,164-182,186-212,216-244,248-269 trang register*/
+
+.box-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*end header and footer*/
+
+
+/* thẻ div dòng 288-295 trang register*/
+
+.box-title {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-top: 100px;
+}
+
+
+/* thẻ h1 dòng 289-291 trang register*/
+
+.box-title>h1 {
+    font-size: 30px;
+    font-family: "Courier New";
+    display: inline;
+}
+
+
+/* thẻ p dòng 292-294 trang register*/
+
+.box-title>p {
+    font-size: 18px;
+    display: inline-block;
+}
+
+
+/* thẻ div dòng 298-306 trang register*/
+
+.img-user-dash {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-top: 25px;
+    padding-left: 8%;
+}
+
+
+/* thẻ div dòng 299-301 trang register*/
+
+.dash-left {
+    width: 40%;
+    height: 1px;
+    margin-top: 40px;
+}
+
+
+/* thẻ div dòng 302 trang register*/
+
+.img-user {
+    width: 10%;
+    height: auto;
+}
+
+
+/* thẻ img dòng 302 trang register*/
+
+.img-user img {
+    width: 80px;
+    height: 80px;
+}
+
+
+/* thẻ div dòng 303-305 trang register*/
+
+.dash-right {
+    width: 40%;
+    height: 1px;
+    margin-top: 40px;
+}
+
+
+/* thẻ div dòng 309-378 trang register*/
+
+.form-register {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+
+/* thẻ div dòng 310-338,354-360,362-368,370-374 trang register*/
+
+.row {
+    display: inline-flex;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* thẻ div dòng 311-319,321-325,327-331,333-337 trang register*/
+
+.row-1-form-group {
+    width: 25%;
+    height: 100%;
+}
+
+
+/* thẻ div dòng 312,322,328,334 trang register*/
+
+.row-1-form-group>label {
+    display: block;
+}
+
+
+/* thẻ input dòng 324,330,336 trang register*/
+
+.row-1-form-group>input {
+    display: block;
+    width: 80%;
+    height: 35px;
+    margin-top: 7px;
+}
+
+
+/* thẻ select dòng 313-318 trang register*/
+
+.row-1-form-group>select {
+    display: block;
+    width: 80%;
+    height: 35px;
+    margin-top: 7px;
+}
+
+
+/* thẻ div dòng 341-345,347-351 trang register*/
+
+.row-2-form-group {
+    width: 50%;
+    height: 100%;
+}
+
+
+/* thẻ lable dòng 342,348 trang register*/
+
+.row-2-form-group>label {
+    display: block;
+}
+
+
+/* thẻ div dòng 344,350 trang register*/
+
+.row-2-form-group>input {
+    display: block;
+    width: 60%;
+    height: 35px;
+    margin-top: 7px;
+}
+
+
+/* thẻ div dòng 355-359,363-367,371-373 trang register*/
+
+.row-3-form-group {
+    width: 30%;
+    height: 100%;
+    display: flex;
+}
+
+
+/* thẻ input dòng 356,364 trang register*/
+
+.checkbox {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* thẻ span dòng 358,366 trang register*/
+
+.row-3-form-group>span {
+    padding-top: 25px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+/* thẻ div dòng 356,364,372 trang register*/
+
+.row-3-form-group>input[type=submit] {
+    width: 60%;
+    height: 45px;
+    background: #252e3c;
+    border: none;
+    color: #eff0f1;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* thẻ div dòng 310-338,354-360,362-368 trang register*/
+
+.ju-center {
+    justify-content: center;
+}
