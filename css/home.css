@@ -289,6 +289,17 @@
     float: left;
 }
 
+#dropdown-3d {
+    width: 550px!important;
+}
+
+#dropdown-3d .menu-dropdown-main-img {
+    width: 45%
+}
+
+#dropdown-3d .menu-dropdown-main-content {
+    width: 55%
+}
 
 /* thẻ div dòng 171-181, 197-211, 228-243, 257-268 trang home*/
 
@@ -478,6 +489,51 @@
     text-align: left;
 }
 
+.col1>.div-dropdown-3d> div >a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+.div-dropdown-3d >.dropdown-3d-container > .dropdown-3d-content > a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+
+.div-dropdown-3d >.dropdown-3d-container {
+    display: flex;
+    position: relative;
+    width: 120px;
+}
+
+.div-dropdown-3d >.dropdown-3d-container > .dropdown-3d-content {
+    display: none;
+    position: absolute;
+    left: 95px;
+    top: 5px;
+}
+
+.dropdown-3d-container:hover >.dropdown-3d-content{
+    display: block!important;
+}
+.dropdown-3d-container:hover > a{
+    color: red!important;
+}
+.dropdown-3d-content-link:hover {
+    color: red!important;
+}
+
+.jewellery-a-hover {
+    z-index: 10;
+}
 
 /* thẻ div dòng 288-381 trang home*/
 
@@ -500,12 +556,6 @@
 
 
 /* thẻ div dòng 290-331 trang home*/
-
-.main-slide {
-    width: 1100px;
-    margin: auto;
-    overflow: hidden;
-}
 
 
 /* thẻ img dòng 334 trang home*/
@@ -759,7 +809,18 @@
     display: block;
 }
 
-
+.timepieces-a-hover:hover {
+    color: red!important;
+}
+.hob-a-hover:hover {
+    color: red!important;
+}
+.s-a-hover:hover {
+    color: red!important;
+}
+.h-a-hover:hover {
+    color: red!important;
+}
 /* thẻ span dòng 18,19,160,163,185,215,247,272 trang home*/
 
 .menu-element:hover>.menu-dropdown-main-small {
