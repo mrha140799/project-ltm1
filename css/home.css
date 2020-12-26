@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Bradhitc';
+  src: url('../font/bradhitc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 * {
     height: 100%;
     margin: 0;
@@ -71,7 +75,7 @@
 .user-services {
     position: absolute;
     width: 100%;
-    height: 120px;
+    height: 140px;
     top: 0;
     left: 0;
     background: #001526;
@@ -363,7 +367,7 @@
 
 .col-100>div>h5 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
     margin-right: 30px;
@@ -374,7 +378,7 @@
 
 .col-33>div>h5 {
     font-size: 20px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
 }
@@ -384,7 +388,7 @@
 
 .col-33>div>h4 {
     font-size: 20px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
 }
 
@@ -393,7 +397,7 @@
 
 .col1>div>h4 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
 }
 
@@ -430,7 +434,7 @@
 
 .col1>div>h5 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
     margin-right: 30px;
@@ -714,7 +718,7 @@
 /* thẻ div dòng 350-380 trang home*/
 
 .main-news {
-    max-width: 100%;
+    
     width: 100%;
 }
 
@@ -736,7 +740,7 @@
 
 .main-menu-element {
     width: 32%;
-    height: 130px;
+    height: 100px;
     background: white;
     text-decoration: none;
     color: #0b2238;

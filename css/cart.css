@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Bradhitc';
   src: url('../font/bradhitc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
+} 
 * {
     margin: 0;
     padding: 0;
@@ -549,14 +549,10 @@
 /* thẻ div dòng 288-381 trang productDetail1, productDetail2, productDetail3, productDetail4,*/
 
 .main {
-    padding: 0 10%;
     max-width: 100%;
     height: 100%;
-    margin-top: 140px;
-    margin-bottom: 50px;
-    background: #f0f1f2;
+    margin: 180px 100px 50px 100px;
     box-sizing: border-box;
-    display: flex;
     position: relative;
 }
 
@@ -1013,4 +1009,70 @@
     color: #eff0f1;
     font-size: 18px;
     cursor: pointer;
+}
+.my-table {
+    background: #f0f1f2;
+}
+.table-product-detail {
+    margin-top: 20px;
+}
+.product-cart-img {
+    width: 100%
+}
+.div-product-cart {
+    width: 120px;
+    height: 150px;
+    padding: 10px;
+}
+.div-product-amount input {
+    width: 70px;
+}
+.div-total-product {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 50px 0 0;
+}
+.box-title1>p {
+    font-size: 18px;
+    font-family: "Courier New";
+    padding-bottom: 10px;
+}
+.box-title1 {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-top: 50px;
+}
+.box-title1 > select {
+    width: 30%;
+    height: 40px;
+}
+.img-user-dash {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-top: 25px;
+    padding-left: 8%;
+}
+.img-user {
+    width: 10%;
+    height: auto;
+}
+
+.dash-left {
+    width: 40%;
+    height: 1px;
+    margin-top: 40px;
+}
+.img-user img {
+    width: 80px;
+    height: 80px;
+}
+
+.dash-right {
+    width: 40%;
+    height: 1px;
+    margin-top: 40px;
 }

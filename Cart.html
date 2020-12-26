@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
 
 </head>
 <body>
@@ -229,78 +229,37 @@
     </div>
 </div>
 <div class="main">
-    <div class="box-title" align="center">
-        <h1>
-            I WOULD LIKE TO REGISTER A NEW MY BREGUET ACCOUNT
-        </h1>
-        <P>
-            Create your My Breguet account to benefit from our exclusive services, be the first to discover our latest products, events and publications, and to manage your personal information.
-        </P>
+    <div id="div-product">
+        <div class="table-title my-table" >
+            <table>
+                <tr>
+                    <th width="500" height="50" align="center">Product</th>
+                    <th width="280" height="50" align="center">Unit price</th>
+                    <th width="280" height="50" align="center">Amount</th>
+                    <th width="280" height="50" align="center">Amount Of Money</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="div-total-product">
+        <div style="display: inline-block;">
+            <span>Total: </span> <span id="total-order">$</span>
+        </div>
+    </div>
+    <div class="box-title1" align="center">
+        *Thanks for supporting us*
     </div>
     <div class="img-user-dash">
         <div class="dash-left">
             <hr>
         </div>
-        <div class="img-user" align="center"><img src="image/icon/user.png" alt=""> </div>
+        <div class="img-user" align="center"><img src="image/logo/logoblack.png" alt=""> </div>
         <div class="dash-right">
             <hr>
         </div>
     </div>
-    <div class="form-register" align="center">
-        <div class="row">
-            <div class="row-1-form-group">
-                <label>*TITLE</label>
-                <select id="title">
-                    <option value="" selected disabled hidden>Please select</option>
-                    <option value="mr">Mr</option>
-                    <option value="mrs">Mrs</option>
-                    <option value="dr">Dr</option>
-                </select>
-            </div>
-            <div class="row-1-form-group">
-                <label>*FIRST NAME</label>
-                <input type="text" id="firstName">
-            </div>
-            <div class="row-1-form-group">
-                <label>*LAST NAME</label>
-                <input type="text" id="lastName">
-            </div>
-            <div class="row-1-form-group">
-                <label>*EMAIL ADDRESS</label>
-                <input type="text" id="email">
-            </div>
-        </div>
-        <div class="row">
-            <div class="row-2-form-group">
-                <label>*PASSWORD</label>
-                <input type="password" id="password">
-            </div>
-            <div class="row-2-form-group">
-                <label>*CONFIRM PASSWORD</label>
-                <input type="password" id="confirmPassword">
-            </div>
-        </div>
-        <div class="row ju-center">
-            <div class="row-3-form-group">
-                <input type="checkbox" class="checkbox" value="true" id="checkBox1">
-                <span>*I would like to create an account with Breguet to be part of its exclusive inner circle and receive information via email in connection with my account and accept the Terms of Use. I confirm to have read and understood the Privacy Notice.</span>
-            </div>
-        </div>
-        <div class="row ju-center">
-            <div class="row-3-form-group">
-                <input type="checkbox" class="checkbox" value="true" id="checkBox2">
-                <span>*I would like to create an account with Breguet to be part of its exclusive inner circle and receive information via email in connection with my account and accept the Terms of Use. I confirm to have read and understood the Privacy Notice.</span>
-            </div>
-        </div>
-        <div class="row ju-center">
-            <div class="row-3-form-group">
-                <input type="submit" id="submit">
-            </div>
-        </div>
-        <div class="row"></div>
-
-    </div>
 </div>
+
 
 <div class="footer">
     <div class="footer-menu">
@@ -323,6 +282,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
+
 </body>
 </html>

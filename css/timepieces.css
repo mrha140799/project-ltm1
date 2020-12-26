@@ -1,5 +1,8 @@
 /*header and footer*/
-
+@font-face {
+  font-family: 'Bradhitc';
+  src: url('../font/bradhitc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
 * {
     height: 100%;
     margin: 0;
@@ -225,7 +228,203 @@
     left: 0;
     animation: opacityUp ease-in-out .6s;
 }
+#dropdown-3d {
+    width: 550px!important;
+}
 
+#dropdown-3d .menu-dropdown-main-img {
+    width: 45%
+}
+
+#dropdown-3d .menu-dropdown-main-content {
+    width: 55%
+}
+
+.col1>.div-dropdown-3d> div >a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+.div-dropdown-3d >.dropdown-3d-container > .dropdown-3d-content > a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+
+.div-dropdown-3d >.dropdown-3d-container {
+    display: flex;
+    position: relative;
+    width: 120px;
+}
+
+.div-dropdown-3d >.dropdown-3d-container > .dropdown-3d-content {
+    display: none;
+    position: absolute;
+    left: 95px;
+    top: 5px;
+}
+
+.dropdown-3d-container:hover >.dropdown-3d-content{
+    display: block!important;
+}
+.dropdown-3d-container:hover > a{
+    color: red!important;
+}
+.dropdown-3d-content-link:hover {
+    color: red!important;
+}
+.timepieces-a-hover:hover {
+    color: red!important;
+}
+.hob-a-hover:hover {
+    color: red!important;
+}
+.s-a-hover:hover {
+    color: red!important;
+}
+.h-a-hover:hover {
+    color: red!important;
+}
+.main{
+    padding-left: 70px;
+}
+
+.list{
+    padding: 100px;
+}
+
+.list ul.list_pro{
+    list-style: none;
+    overflow: hidden;
+}
+
+.list ul.list_pro li{
+    display: block;
+    width: 30.90909090909091%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0 3.636363636363636% 3.636363636363636% 0;
+}
+
+.list ul.list_pro li img.list_img{
+    width: 70%;
+    height: auto!important;
+    vertical-align: top;
+}
+
+span{
+    width: auto;
+    height: auto;
+}
+
+.list ul.list_pro li .gia{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #514d4d;
+    font-family:Courier New;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.list ul.list_pro li:nth-child(3n+0){
+    margin-right: 0;
+}
+
+.list ul li .list_CT{
+    width: 70%;
+    padding: 2.941176470588235% 5.882352941176471% 4.117647058823529% 5.882352941176471%;
+    border-bottom: 1px solid #f2f1f1;
+    border-left: 1px solid #f2f1f1;
+    border-right: 1px solid #f2f1f1;
+
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+.list ul li:hover .list_CT{
+    border-bottom: 1px solid #95badf;
+    border-left: 1px solid #95badf;
+    border-right: 1px solid #95badf;
+}
+
+.list ul li .list_CT h1{
+    color: #666464;
+    font-family:Courier New;
+    font-size: 18px!important;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 28px;
+}
+
+.list ul li .list_CT h1 a{
+    text-decoration: none;
+    color: #666464;
+}
+
+.list ul li .list_CT h2{
+    color: #9d9d9d;
+    font-family:Courier New;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+.list ul li .list_CT .list_size{
+    color: #676767;
+}
+
+.list .xemthem{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 84px 0 22px 0;
+}
+
+.list .xemthem_btn{
+    text-decoration: none;
+    padding: 20px 40px;
+    border: 2px solid #bfd9f1;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    color: black;
+    font-family:monospace;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+.list .xemthem_btn:hover{
+    color: #a0c3e5;
+    border: 2px solid #a0c3e5;    
+}
 
 /* 6 thẻ img dòng 219-225 trang timepiecs*/
 
@@ -354,7 +553,7 @@
 
 .col-100>div>h5 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
     margin-right: 30px;
@@ -365,7 +564,7 @@
 
 .col-33>div>h5 {
     font-size: 20px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
 }
@@ -375,7 +574,7 @@
 
 .col-33>div>h4 {
     font-size: 20px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
 }
 
@@ -384,7 +583,7 @@
 
 .col1>div>h4 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
 }
 
@@ -421,7 +620,7 @@
 
 .col1>div>h5 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
     margin-right: 30px;
@@ -870,4 +1069,12 @@
 .element-main {
     width: 260px;
     height: 200px;
+}
+.background-white {
+    background-color: white!important;
+}
+.background-white .hover-color-black {
+    color: black;
+    border-bottom: 3px solid #001526;
+    animation: opacityUp ease-in-out .5s;
 }

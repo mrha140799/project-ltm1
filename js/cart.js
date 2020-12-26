@@ -28,7 +28,7 @@ showHoverImg(hobHoverImg, 0);// hien thi anh o vi tri 0 trong hobHoverImg
 showHoverImg(sHoverImg, 0);// hien thi anh o vi tri 0 trong sHoverImg
 showHoverImg(hHoverImg, 0);// hien thi anh o vi tri 0 trong hHoverImg
 showHoverImg(posHoverImg, 0);// hien thi anh o vi tri 0 trong posHoverImg
-
+showAllProduct();
 
 //// tao ham hien thi anh o vi tri n trong mang anh imgArr
 function showHoverImg(imgArr, n) {
@@ -102,65 +102,51 @@ let registerAndSignIn = document.querySelectorAll(".user-services-element");  //
 
 if (window.sessionStorage.getItem("account") != null) isLogin = true; // kiem tra xem trong sessionStorage xem co item nao bang account ko neu co thi da dang nhap, neu khong thi chua dang nhap
 
+function showAllProduct() {
+    let totalOrder = 0;
+    let products = sessionStorage.getItem("products");
+    products = products ? JSON.parse(products) : [];
+    let divProducs = document.getElementById("div-product");
+    products.map(item =>{
+        let productPrice = item.imagePrice.replace("$","");
+        productPrice = parseInt(productPrice);
+        totalOrder += productPrice;
+        divProducs.innerHTML += `<div class="table-product-detail my-table">
+            <table>
+                <tr>
+                    <th width="500" height="50" align="center"><div class="div-product-cart"><img class="product-cart-img" src="${item.iamgeSrc}"></div></th>
+                    <th width="280" height="50" align="center"><div class="div-product-price"><span id="${item.id + "price"}">${item.imagePrice}</span></div></th>
+                    <th width="280" height="50" align="center"><div class="div-product-amount"><input id="${item.id + "amount"}" type="number" min="1" name="" value="1" onChange="onChangeProductAmount('${item.id}')"></div></th>
+                    <th width="280" height="50" align="center"><div class="div-product-total"><span id="${item.id + "total"}">${item.imagePrice}</span></div></th>
+                </tr>
+            </table>
+        </div>`
+    });
+    document.getElementById("total-order").innerText = "$" + totalOrder;
+     // body...
+ }
+ function onChangeProductAmount(idProduct) {
+    let productPrice = document.getElementById(idProduct+"price").innerText;
+    let productAmount = document.getElementById(idProduct+"amount").value;
+    let productTotal = document.getElementById(idProduct + "total").innerText;
+    productPrice = productPrice.replace("$","");
+    productPrice = parseInt(productPrice);
+    productAmount = parseInt(productAmount);
+    productTotal = "$"+(productAmount * productPrice);
+    document.getElementById(idProduct + "total").innerText = productTotal;
+    resetAllPrice();
+        // body...
+ }
 
-//show pop-up
-let btnGetIt = document.getElementById("getIt"); // lay ra button voi id la getIt
-let popUp = document.querySelector(".get-info-popup"); // lay ra div co class la .get-info-popup
-let btnClosePopUp = document.querySelector("#close-popup"); // lay ra input voi id la #close-popup
-let buyIt = document.querySelector("#buy-it");// lay ra input voi id la #buy-it
-let inforUserInput = document.querySelectorAll(".element-main > input"); //lay ra tat ca input de nhap du lieu ng dung
-
-//tao su kien click vao button btnGetIt
-btnGetIt.addEventListener("click", () => {
-    let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
-    inforUserInput[0].value = accountInf.title; // gan accountInf.title vao o input vi tri 0
-    inforUserInput[1].value = accountInf.firstName;// gan accountInf.firstName vao o input vi tri 1
-    inforUserInput[2].value = accountInf.lastName;// gan accountInf.lastName vao o input vi tri 2
-    inforUserInput[3].value = accountInf.email;// gan aaccountInf.email;= vao o input vi tri 3
-    popUp.style.display = "block"; // hien thi div popUp
-});
-// tao su kien vao button mua
-buyIt.addEventListener("click", () => {
-    if (!inforUserInput[4].value == '') { // kiem tra nguoi dung da nhap du thong tin chua
-        let imageSrc = document.getElementById("product-image").src;
-        let imagePrice = document.getElementById("product-price").innerText;
-        let product = {
-            iamgeSrc: imageSrc,
-            imagePrice: imagePrice
-        }
-        let products = sessionStorage.getItem("products");
-        if (products) {
-            products = JSON.parse(products);
-            products.push({
-                id: "product_" + (products.length + 1),
-                ...product
-            });
-        } else {
-            products = [];
-            products.push({
-                id: "product_" + (products.length + 1),
-                ...product
-            });
-        }
-        sessionStorage.setItem("products", JSON.stringify(products));
-        alert("Add to cart successfully!"); // thong bao thanh cong
-        window.location.href = "Home.html"; // chuyen trang den trang home
-    } else {
-        alert("Please input address!"); // thong bao chua nhap du thong tin
-    }
-});
-// tao su kien vao o button thoat
-btnClosePopUp.addEventListener("click", () => {
-    popUp.style.display = "none"; // tat div popUp
-});
-//tao su kien bam ra ngoai thi se thoat div popUp
-document.addEventListener('click', function (event) {
-    let isClickBtnGetIt = btnGetIt.contains(event.target);
-    let isClickPopUp = popUp.contains(event.target);
-    if (!isClickBtnGetIt && !isClickPopUp) {
-        popUp.style.display = "none";
-    }
-});
-
-
-
+ function resetAllPrice() {
+    let totalOrder = 0;
+    let products = sessionStorage.getItem("products");
+    products = products ? JSON.parse(products) : [];
+    products.map(item => {
+        let productPrice = document.getElementById(item.id + "total").innerText;
+        productPrice = productPrice.replace("$","");
+        totalOrder += parseInt(productPrice);
+    });
+    document.getElementById("total-order").innerText = "$" + totalOrder;
+     // body...
+ }

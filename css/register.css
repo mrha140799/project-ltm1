@@ -1,5 +1,8 @@
 /*header and footer*/
-
+@font-face {
+  font-family: 'Bradhitc';
+  src: url('../font/bradhitc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
 * {
     height: 100%;
     margin: 0;
@@ -87,7 +90,7 @@
     width: 100%;
     display: block;
     height: auto;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 
@@ -142,6 +145,70 @@
     z-index: 1;
     box-sizing: border-box;
     animation: moveUp ease-in-out .2s;
+}
+#dropdown-3d {
+    width: 550px!important;
+}
+
+#dropdown-3d .menu-dropdown-main-img {
+    width: 45%
+}
+
+#dropdown-3d .menu-dropdown-main-content {
+    width: 55%
+}
+.col1>.div-dropdown-3d> div >a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+.div-dropdown-3d >.dropdown-3d-container > .dropdown-3d-content > a {
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    z-index: 0;
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+}
+
+.div-dropdown-3d >.dropdown-3d-container {
+    display: flex;
+    position: relative;
+    width: 120px;
+}
+
+.div-dropdown-3d >.dropdown-3d-container > .dropdown-3d-content {
+    display: none;
+    position: absolute;
+    left: 95px;
+    top: 5px;
+}
+
+.dropdown-3d-container:hover >.dropdown-3d-content{
+    display: block!important;
+}
+.dropdown-3d-container:hover > a{
+    color: red!important;
+}
+.dropdown-3d-content-link:hover {
+    color: red!important;
+}
+.timepieces-a-hover:hover {
+    color: red!important;
+}
+.hob-a-hover:hover {
+    color: red!important;
+}
+.s-a-hover:hover {
+    color: red!important;
+}
+.h-a-hover:hover {
+    color: red!important;
 }
 
 
@@ -354,7 +421,7 @@
 
 .col-100>div>h5 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
     margin-right: 30px;
@@ -365,7 +432,7 @@
 
 .col-33>div>h5 {
     font-size: 20px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
 }
@@ -375,7 +442,7 @@
 
 .col-33>div>h4 {
     font-size: 20px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
 }
 
@@ -384,7 +451,7 @@
 
 .col1>div>h4 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
 }
 
@@ -421,7 +488,7 @@
 
 .col1>div>h5 {
     font-size: 30px;
-    font-family: "Bradley Hand ITC";
+    font-family: "Bradhitc";
     display: inline;
     border-bottom: 0.5px solid #d1cfcf;
     margin-right: 30px;
