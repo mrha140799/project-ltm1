@@ -101,14 +101,40 @@ let signOut = document.getElementById("signout"); // lay ra the a co id la signo
 let registerAndSignIn = document.querySelectorAll(".user-services-element");  // lay ra toan bo the a co class la .user-services-element
 
 if (window.sessionStorage.getItem("account") != null) isLogin = true; // kiem tra xem trong sessionStorage xem co item nao bang account ko neu co thi da dang nhap, neu khong thi chua dang nhap
-
+if (isLogin) {
+    for (let i = 0; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display = "none";
+    signOut.style.display = "block";
+    signOut.style.marginTop = "40px";
+    signOut.addEventListener("click", () => {
+        window.sessionStorage.removeItem("account");
+        isLogin = false;
+        window.location.href = "index.html";
+    })
+} else { // neu khong thi an the a signOut
+    for (let i = 0; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display = "block";
+    signOut.style.display = "none";
+}
+if (isEmptyProducts()) {
+    const btnBuy = document.getElementById("btnBuy");
+    btnBuy.style.display = "none";
+}
 function showAllProduct() {
+    const btnBuy = document.getElementById("btnBuy");
+    const ICON_DELETE_DIR = "image/icon/delete-icon.png";
+    let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
+    if (!accountInf) {
+        btnBuy.style.display = "none";
+        return;
+    }
     let totalOrder = 0;
-    let products = sessionStorage.getItem("products");
+    let products = sessionStorage.getItem(accountInf.email + "_products");
     products = products ? JSON.parse(products) : [];
+    if (!products.length) {
+        btnBuy.style.display = "none";
+    }
     let divProducs = document.getElementById("div-product");
-    products.map(item =>{
-        let productPrice = item.imagePrice.replace("$","");
+    products.map(item => {
+        let productPrice = item.imagePrice.replace("$", "");
         productPrice = parseInt(productPrice);
         totalOrder += productPrice;
         divProducs.innerHTML += `<div class="table-product-detail my-table">
@@ -118,35 +144,81 @@ function showAllProduct() {
                     <th width="280" height="50" align="center"><div class="div-product-price"><span id="${item.id + "price"}">${item.imagePrice}</span></div></th>
                     <th width="280" height="50" align="center"><div class="div-product-amount"><input id="${item.id + "amount"}" type="number" min="1" name="" value="1" onChange="onChangeProductAmount('${item.id}')"></div></th>
                     <th width="280" height="50" align="center"><div class="div-product-total"><span id="${item.id + "total"}">${item.imagePrice}</span></div></th>
+                    <th width="280" height="50" align="center"><div class="div-product-total"><button onclick="deleteProduct('${item.id}')"><img style="width: 30px; height: 30px; cursor:pointer;r" src="${ICON_DELETE_DIR}"/></button></div></th>
                 </tr>
             </table>
         </div>`
     });
     document.getElementById("total-order").innerText = "$" + totalOrder;
-     // body...
- }
- function onChangeProductAmount(idProduct) {
-    let productPrice = document.getElementById(idProduct+"price").innerText;
-    let productAmount = document.getElementById(idProduct+"amount").value;
+    // body...
+}
+
+function onChangeProductAmount(idProduct) {
+    let productPrice = document.getElementById(idProduct + "price").innerText;
+    let productAmount = document.getElementById(idProduct + "amount").value;
     let productTotal = document.getElementById(idProduct + "total").innerText;
-    productPrice = productPrice.replace("$","");
+    productPrice = productPrice.replace("$", "");
     productPrice = parseInt(productPrice);
     productAmount = parseInt(productAmount);
-    productTotal = "$"+(productAmount * productPrice);
+    productTotal = "$" + (productAmount * productPrice);
     document.getElementById(idProduct + "total").innerText = productTotal;
     resetAllPrice();
-        // body...
- }
+    // body...
+}
 
- function resetAllPrice() {
+function resetAllPrice() {
     let totalOrder = 0;
-    let products = sessionStorage.getItem("products");
+    let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
+    if (!accountInf) {
+        return;
+    }
+    let products = sessionStorage.getItem(accountInf.email + "_products");
     products = products ? JSON.parse(products) : [];
     products.map(item => {
         let productPrice = document.getElementById(item.id + "total").innerText;
-        productPrice = productPrice.replace("$","");
+        productPrice = productPrice.replace("$", "");
         totalOrder += parseInt(productPrice);
     });
-    document.getElementById("total-order").innerText = "$" + totalOrder;
-     // body...
- }
+    document.getElementById("total-order").innerText = "$" + totalOrder ?? 0;
+    // body...
+}
+
+function deleteProduct(productId) {
+    let isDelete = false;
+    let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
+    if (!accountInf) {
+        return;
+    }
+    let products = sessionStorage.getItem(accountInf.email + "_products");
+    products = products ? JSON.parse(products) : [];
+    console.log(products);
+    for (let i = 0; i < products.length; i++) {
+        if (productId === products[i].id) {
+            products.splice(i, 1);
+            isDelete = true;
+        }
+    }
+    if (isDelete) {
+        sessionStorage.setItem(accountInf.email + "_products", products);
+        window.location.reload();
+    }
+}
+
+document.getElementById("btnBuy").addEventListener("click", () => {
+    let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
+    if (!accountInf) {
+        return;
+    }
+    sessionStorage.removeItem(accountInf.email + "_products" );
+    alert("Buy successfully, Thank for support us!");
+    window.location.reload();
+});
+function isEmptyProducts() {
+    let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
+    if (!accountInf) {
+        return true;
+    }
+    let products = sessionStorage.getItem(accountInf.email + "_products");
+    products = products ? JSON.parse(products) : [];
+    return !products.length;
+}

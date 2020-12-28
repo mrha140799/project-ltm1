@@ -193,7 +193,7 @@ if ( isLogin) {
     signOut.addEventListener("click",()=> {
         window.sessionStorage.removeItem("account");
         isLogin = false;
-        window.location.href = "Home.html";
+        window.location.href = "index.html";
     })
 } else { // neu khong thi an the a signOut
     for (let i = 0 ; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display="block";

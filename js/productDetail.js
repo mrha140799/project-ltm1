@@ -106,17 +106,17 @@ if (!isLogin) {
     alert("Please login to continue!");
     window.location.href = "SignIn.html";
 }
-if ( isLogin) {
-    for (let i = 0 ; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display="none";
+if (isLogin) {
+    for (let i = 0; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display = "none";
     signOut.style.display = "block";
     signOut.style.marginTop = "40px";
-    signOut.addEventListener("click",()=> {
+    signOut.addEventListener("click", () => {
         window.sessionStorage.removeItem("account");
         isLogin = false;
-        window.location.href = "Home.html";
+        window.location.href = "index.html";
     })
 } else { // neu khong thi an the a signOut
-    for (let i = 0 ; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display="block";
+    for (let i = 0; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display = "block";
     signOut.style.display = "none";
 }
 //show pop-up
@@ -144,7 +144,8 @@ buyIt.addEventListener("click", () => {
             iamgeSrc: imageSrc,
             imagePrice: imagePrice
         }
-        let products = sessionStorage.getItem("products");
+        let accountInf = JSON.parse(window.sessionStorage.getItem("account")); // lay ra tai khoan ma ng dung da dang nhap
+        let products = sessionStorage.getItem(accountInf.email +"_products");
         if (products) {
             products = JSON.parse(products);
             products.push({
@@ -158,9 +159,9 @@ buyIt.addEventListener("click", () => {
                 ...product
             });
         }
-        sessionStorage.setItem("products", JSON.stringify(products));
+        sessionStorage.setItem(accountInf.email + "_products", JSON.stringify(products));
         alert("Add to cart successfully!"); // thong bao thanh cong
-        window.location.href = "Home.html"; // chuyen trang den trang home
+        window.location.href = "index.html"; // chuyen trang den trang home
     } else {
         alert("Please input address!"); // thong bao chua nhap du thong tin
     }

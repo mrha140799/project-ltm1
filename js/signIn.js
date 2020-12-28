@@ -108,7 +108,7 @@ connect.addEventListener("click", () => {
     if (listAccount == null) {// neu danh sach tai khoan trong thi tra ve nhap sai
         alert("Incorrect email or password!");// thong bao nhap sai
     }else {
-        //neu nhap dung thi thong bao roi chuyen nguoi dung den trang Home.html
+        //neu nhap dung thi thong bao roi chuyen nguoi dung den trang index.html
         let isLogin = false;
         for (let i = 0 ; i < listAccount.length ; i++)  {
             let  account = listAccount[i];
@@ -119,7 +119,7 @@ connect.addEventListener("click", () => {
         }
         if (isLogin) {
             alert("Login successful!");
-            window.location.href = "Home.html";
+            window.location.href = "index.html";
         }else {
             alert("Incorrect email or password!");
         }

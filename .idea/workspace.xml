@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44f7c0b9-a6af-4682-b528-e0c2b5de5eff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/History.html" beforeDir="false" afterPath="$PROJECT_DIR$/History.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jewellery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Jewellery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductDetail1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProductDetail1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductDetail2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProductDetail2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductDetail3.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProductDetail3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductDetail4.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProductDetail4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timepieces.html" beforeDir="false" afterPath="$PROJECT_DIR$/Timepieces.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/productDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/productDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/signIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/timepieces.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/timepieces.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1m4QVr0GROARqnvGt2v6Vxs50c9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image/icon" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44f7c0b9-a6af-4682-b528-e0c2b5de5eff" name="Default Changelist" comment="" />
+      <created>1608750409470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608750409470</updated>
+      <workItem from="1608750410552" duration="267000" />
+      <workItem from="1608887046132" duration="776000" />
+      <workItem from="1608917100971" duration="53000" />
+      <workItem from="1609013875598" duration="277000" />
+      <workItem from="1609161259893" duration="1748000" />
+      <workItem from="1609163070789" duration="1765000" />
+      <workItem from="1609164888035" duration="1023000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1307" y="235" key="#Inspections" timestamp="1609163832206">
+      <screen x="0" y="25" width="2560" height="1055" />
+    </state>
+    <state x="1307" y="235" key="#Inspections/0.25.2560.1055@0.25.2560.1055" timestamp="1609163832206" />
+    <state x="1742" y="128" width="655" height="700" key="find.popup" timestamp="1609165995669">
+      <screen x="0" y="25" width="2560" height="1055" />
+    </state>
+    <state x="1742" y="128" width="655" height="700" key="find.popup/0.25.2560.1055@0.25.2560.1055" timestamp="1609165995669" />
+  </component>
+</project>
