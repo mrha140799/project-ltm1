@@ -102,7 +102,23 @@ let registerAndSignIn = document.querySelectorAll(".user-services-element");  //
 
 if (window.sessionStorage.getItem("account") != null) isLogin = true; // kiem tra xem trong sessionStorage xem co item nao bang account ko neu co thi da dang nhap, neu khong thi chua dang nhap
 
-
+if (!isLogin) {
+    alert("Please login to continue!");
+    window.location.href = "SignIn.html";
+}
+if ( isLogin) {
+    for (let i = 0 ; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display="none";
+    signOut.style.display = "block";
+    signOut.style.marginTop = "40px";
+    signOut.addEventListener("click",()=> {
+        window.sessionStorage.removeItem("account");
+        isLogin = false;
+        window.location.href = "Home.html";
+    })
+} else { // neu khong thi an the a signOut
+    for (let i = 0 ; i < registerAndSignIn.length; i++) registerAndSignIn[i].style.display="block";
+    signOut.style.display = "none";
+}
 //show pop-up
 let btnGetIt = document.getElementById("getIt"); // lay ra button voi id la getIt
 let popUp = document.querySelector(".get-info-popup"); // lay ra div co class la .get-info-popup

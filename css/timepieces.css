@@ -3,6 +3,10 @@
   font-family: 'Bradhitc';
   src: url('../font/bradhitc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 } 
+@font-face {
+  font-family: 'Cour';
+  src: url('../font/cour.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 * {
     height: 100%;
     margin: 0;
@@ -333,7 +337,7 @@ span{
     padding: 15px 20px;
     background: #ffffff;
     color: #514d4d;
-    font-family:Courier New;
+    font-family:Cour;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -369,7 +373,7 @@ span{
 
 .list ul li .list_CT h1{
     color: #666464;
-    font-family:Courier New;
+    font-family:Cour;
     font-size: 18px!important;
     font-weight: bold;
     margin-bottom: 5px;
@@ -383,7 +387,7 @@ span{
 
 .list ul li .list_CT h2{
     color: #9d9d9d;
-    font-family:Courier New;
+    font-family:Cour;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
