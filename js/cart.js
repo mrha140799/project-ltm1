@@ -199,7 +199,7 @@ function deleteProduct(productId) {
         }
     }
     if (isDelete) {
-        sessionStorage.setItem(accountInf.email + "_products", products);
+        sessionStorage.setItem(accountInf.email + "_products", JSON.stringify(products));
         window.location.reload();
     }
 }

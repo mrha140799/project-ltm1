@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Bradhitc';
   src: url('../font/bradhitc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+}
 * {
     height: 100%;
     margin: 0;
@@ -910,7 +910,7 @@
     height: auto!important;
     vertical-align: top;
 }
-}
+
 .box-title {
     width: 100%;
     height: auto;
@@ -928,7 +928,7 @@
 .box-title>h2 {
     font-size: 20px;
     font-family: "Courier New";
- 
+
 }
 .box-title1>p {
     font-size: 18px;
@@ -2167,4 +2167,8 @@
     color: black;
     border-bottom: 3px solid #001526;
     animation: opacityUp ease-in-out .5s;
+}
+.my-video {
+    display: flex;
+    justify-items: center;
 }
